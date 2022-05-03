@@ -1,0 +1,26 @@
+:root{
+    --main-color:rgb(44, 44, 44);
+    --secondary-color:rgba(34, 34, 34, 0.781);
+    --main-text-color:rgb(230,230,203);
+    --btn-color:hsl(273, 64%, 52%);
+    --btn-color-light:hsla(273, 61%, 59%, 0.986);
+    --variant-color:hsl(273, 62%, 25%);
+    --main-light-color:hsl(0, 0%, 25%);
+}
+.footer_span{
+    color: #858484;
+    margin: 10px;
+}
+.footer_span span{
+    color:var(--main-color);
+}
+
+.footer_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul .icons{
+    height: 3rem;
+}
+

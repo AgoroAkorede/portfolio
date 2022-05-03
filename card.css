@@ -1,0 +1,116 @@
+:root{
+   
+}
+.skills_cards{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    justify-content: space-around;
+   position: relative;
+   width: 80vw;
+   flex-wrap: wrap;
+}
+.icon{
+    fill: var(--btn-color);
+    height: 5rem;
+}
+svg{
+    fill: rgb(177, 176, 176);
+    height: 4rem;
+}
+.skills_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--main-color) ;
+    padding: 2rem;
+    height: 6rem;
+    width: 6rem;
+    margin-right:1.25rem ;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 3s linear;
+    /* transition:  3s linear; */
+    position:relative;
+}
+.skills_effect{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+.skills_effect2{
+    position: absolute;
+    top:80%;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    overflow: hidden;
+    height: 6rem;
+}
+.box{
+    height: 5rem;
+    background-color: var(--btn-color);
+    width: .25rem;
+    margin: .5rem ;
+    animation: 3s boxAnimation linear infinite forwards;
+    border-radius: 5px;
+    
+}
+@keyframes boxAnimation {
+    
+    100%{
+        transform: translateY(150%);
+    }
+}
+.skills_card:hover{
+    transform: scale(1.15);
+    border: solid 1px var(--btn-color);
+    fill: var(--btn-color);
+}
+.skills_card:last-child{
+    transform: rotate(-4deg) translate(10%,-10%);
+    /* transform: ; */
+}
+
+ .skills_card *:hover{
+    fill: var(--btn-color);
+    background-color: transparent;
+}
+.skills_card_effect{
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: var(--btn-color);
+    left: 0;
+    border-radius: inherit;
+    /* opacity: 0; */
+}
+/* .slider{
+    width: 1.25rem;
+    height: 1.5rem;
+    background-color: var(--btn-color);
+    border-radius: 50% 3px 3px 50%;
+    position: absolute;
+    right: 3px;
+    top: 65%;
+} */
+
+.hand{
+    height: 4rem;
+    position: absolute;
+    top: -4rem;
+    right: -4rem;
+    transform: rotate(30deg);
+
+}
+.hand img{
+    height: 100%;
+}
