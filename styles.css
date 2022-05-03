@@ -15,6 +15,10 @@ body{
 #main_content{
     display: none;
 }
+a{
+    text-decoration :none;
+    color:var(--main-text-color);
+}
 
 :root{
     --main-color:#2c2c2c;
@@ -532,6 +536,8 @@ footer{
 .address_quote{
     margin: 3rem 0;
 }
+/*-------------------------- preloader -------------------------*/
+
 #preloader{
     background: var(--btn-color);
     background-repeat: no-repeat;
@@ -550,8 +556,15 @@ footer{
    justify-content: space-around;
    align-items: center;
    flex-direction: row;
-    height: 100vh;
     width: 20vw;
+}
+.loader_container{
+    display: flex;
+   justify-content:center;
+   align-items: center;
+   flex-direction: column;
+    height: 100vh;
+    width: 80vw;
 }
 .loader_box{
     height: .5rem;
@@ -559,7 +572,6 @@ footer{
     background-color: var(--secondary-color);
     animation: 5s loadingAnimation infinite backwards;
     border-radius: 3px;
-
 }
 @keyframes loadingAnimation {
     25%{
@@ -572,6 +584,13 @@ footer{
     75%{
         transform: translateX(-50%)  rotate(-180deg);
     }
+}
+.quote{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin:3rem;
 }
 
 /* media queries */
