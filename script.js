@@ -4,6 +4,7 @@ const positionMarkerLine1=document.getElementById('position_marker-line1');
 const positionMarkerLine2=document.getElementById('position_marker-line2')
 const positionMarkerLine3=document.getElementById('position_marker-line3')
 const positionMarkerLine4=document.getElementById('position_marker-line4')
+const positionMarker=document.getElementById('position_marker')
 const preloader=document.getElementById('preloader')
 const mainContent=document.getElementById('main_content')
 
@@ -60,7 +61,8 @@ positionMarkerLine4.addEventListener("click", postionMarker4)
 
 
 window.addEventListener("load",function(){
-    preloader.style.display="none"
+    preloader.style.display = "none"
+    positionMarker.style.display="flex"
     // mainContent.style.display='flex'
 })
 
