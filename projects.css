@@ -5,6 +5,7 @@
     justify-content: space-evenly;
    position: relative;
    width: 100vw;
+   /* height: 60vh; */
    flex-wrap: wrap;
 }
 
@@ -20,7 +21,6 @@
     margin-right:.75rem ;
     margin-top: 1rem;
     border-radius: 1rem;
-    cursor: pointer;
     transition: all 3s linear;
     /*transition:  3s linear;
     */position:relative;
@@ -31,25 +31,47 @@
     box-shadow: #1f1f1f 3px 5px 6px;
 }
 .project_item img{
-    height: 50%;
+    height: 60%;
+    width: 100%;
     position: absolute;
     top: 25%;
-    border-radius: inherit;
+   
+    /*left: 1.35rem;
+    */left: 0;
+    /*border-radius: inherit;
     -webkit-border-radius: inherit;
     -moz-border-radius: inherit;
     -ms-border-radius: inherit;
     -o-border-radius: inherit;
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
+    */filter: blur(1px) brightness(70%);
+    
 }
 .project_item .title{
     position: absolute;
     top: .5%;
+    
+    left: 1rem;
 }
+.project_item .info{
+    color: var(--btn-color);
+    font-size: .75rem;left: 1rem;
+}
+.project_item .effect{
+   height: 2rem;
+   width: .2rem;
+   position: absolute;
+   top: 10%;
+   left: 6.5%;
+   background-color: var(--main-text-color);
+   z-index: 1;
+}
+
+
 
 .stack{
     position: absolute;
     bottom:.5rem;
+    left: .5rem;
     width: 80%;
     height: 10%;
     display: flex;
@@ -60,10 +82,40 @@
 .stack_item{
     background-color: var(--btn-color);
     padding: .5rem;
-    border-radius: .5rem;
-    -webkit-border-radius: .5rem;
-    -moz-border-radius: .5rem;
-    -ms-border-radius: .5rem;
-    -o-border-radius: .5rem;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
     margin: .5rem;
+    font-size: .75rem;
+    color: var(--main-color);
+}
+.icon_globe{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    height: 1.75rem;
+    width: 1.75rem;
+    background-image: url(/icons/globe-solid.svg);
+    filter:brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+    -webkit-filter:brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+    cursor: pointer;
+    /* display: none; */
+}
+.hide{
+    display: flex;
+}
+.icon_git{
+   z-index: 10;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   height: 1.75rem;
+   width: 1.75rem;
+   background-image: url(/icons/github-brands.svg);
+   filter:brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+   -webkit-filter:brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+   cursor: pointer;
 }
