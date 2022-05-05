@@ -1,4 +1,7 @@
-const moreSkills=document.querySelector("#Button")
+ "use strict";
+
+
+ const moreSkills=document.querySelector("#Button")
 
 const positionMarkerLine1=document.getElementById('position_marker-line1');
 const positionMarkerLine2=document.getElementById('position_marker-line2')
@@ -66,5 +69,15 @@ window.addEventListener("load",function(){
     // mainContent.style.display='flex'
 })
 
+const navMobile=document.getElementById('navbar_mobile')
+
+const navMobileBar = document.getElementById('navbar_mobile-bar')
+// const navMobileBar = document.getElementById('navbar_mobile-bar')
 
 
+function toggleNav() {
+    navMobile.classList.toggle('hide')
+   
+}
+
+navMobileBar.addEventListener("click", toggleNav)

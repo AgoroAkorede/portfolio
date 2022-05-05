@@ -78,6 +78,7 @@ svg{
     /* transform: ; */
 }
 
+
  .skills_card:hover .icon svg{
     fill: var(--btn-color);
     background-color: transparent;
