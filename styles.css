@@ -38,7 +38,10 @@ a{
     text-decoration :none;
     color:var(--main-text-color);
 }
-
+div{
+    display: flex;
+    flex-direction: column;
+}
 :root{
     --main-color:#272727;
 
@@ -106,6 +109,7 @@ section{
     margin: 1rem 0;
     transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
     font-size: 1.2rem;
+    width: 12rem;
 
 }
 .contact_button a{
@@ -125,7 +129,7 @@ section{
 }
 h1{
     font-size: 2rem;
-    
+    text-align:center ;
 }
 .about-me{
     display:flex ;
@@ -133,7 +137,7 @@ h1{
     justify-content: space-evenly;
     width: 100vw;
     min-height: 70vh;
-    margin: 2rem 4rem;
+    margin: 2rem;
     font-family: 'Courier New', Courier, monospace;
     width: 100vw;
     overflow-x: hidden;
@@ -144,7 +148,7 @@ h1{
     -o-transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
 }
 .about-me__title{
-    width: 35%;
+    width: 10rem;
     height: 50%;
     /* text-align: center; */
     overflow-x: hidden;
@@ -154,7 +158,7 @@ h1{
 }
 .about-me__name{
     height:90%;
-    width: 47.5%;
+    width: 40%;
 }
 
 .about-me__special{
@@ -171,9 +175,18 @@ h1{
     padding:1rem 0rem;
 }
 .about-me__image{
-    height: 30vh;
-    width: 15vw;
+    height: 12rem;
+    width: 12rem;
     position: relative;
+    background-image: url(/assets/Korede.2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: .5rem;
 }
 .socials{
     display: flex;
@@ -210,16 +223,23 @@ footer .socials .icon_socials svg:hover{
 .about-me__info{
     /* height: 3rem; */
     width:60%;
-    /* background-image: url('https://bashooka.com/wp-content/uploads/2018/04/scg-canvas-background-animation-24.jpg'); */
+
 }
 
 .img{
     object-fit: contain;
     height: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     filter: brightness(70%);
     position: absolute;
+    
     top: 0;
+    /* box-shadow: 0 0 15px 2px rgb(0 0 0 / 20%); */
     /* border: solid white 5px; */
     
 }
@@ -236,6 +256,11 @@ footer .socials .icon_socials svg:hover{
     z-index: -1;
     animation: 5s 2s linear forwards specialAnimation2;
 }
+.about-me__info-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 .image-effect_1{
     position: absolute;
@@ -251,6 +276,7 @@ footer .socials .icon_socials svg:hover{
 }
 .about-me__info-header{
     margin: 1.25rem 0;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%)
     
 }
 .about-me__info .name{
@@ -282,7 +308,7 @@ footer .socials .icon_socials svg:hover{
 }
 .about-me__text{
     color: rgb(109, 109, 109);
-    width: 50%;
+    width: 80%;
 }
 @keyframes specialAnimation2 {
     100%{
@@ -382,6 +408,9 @@ footer .socials .icon_socials svg:hover{
 }
 .orbit_object img{
     height: 3rem;
+}
+.orbit_object .img{
+    height: 5rem;
 }
 .orbit2{
     position: absolute;
@@ -534,7 +563,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: .25rem;
+    margin: .45rem;
     /* background-color: var(--btn-color-light); */
     border-radius: 40%;
     align-items: center;
@@ -825,6 +854,18 @@ footer{
  .quote{
      font-size: 1.25rem;
  }
+ .about-me__info{
+    /* height: 3rem; */
+    width:80%;
+}
+.more_about-content{
+    width: 75vw;
+ 
+}
+.about-me__image{
+    height: 16rem;
+    width: 16rem;
+}
 }
 @media(max-width:63.875rem){
     .about-me{
