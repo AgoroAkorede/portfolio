@@ -69,15 +69,18 @@ window.addEventListener("load",function(){
     // mainContent.style.display='flex'
 })
 
+//-------------- The MobileNav Controller -------------------
+
 const navMobile=document.getElementById('navbar_mobile')
 
 const navMobileBar = document.getElementById('navbar_mobile-bar')
-// const navMobileBar = document.getElementById('navbar_mobile-bar')
 
-
+const navLine = document.getElementById('nav_line')
 function toggleNav() {
-    navMobile.classList.toggle('hide')
-   
+    navMobile.classList.toggle('toggle')
 }
 
-navMobileBar.addEventListener("click", toggleNav)
+navMobileBar.addEventListener("click", () => {
+    navMobile.classList.toggle('hide')
+    navMobileBar.classList.toggle('toggle')
+})

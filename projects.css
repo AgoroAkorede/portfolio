@@ -151,7 +151,11 @@
     -o-transition:.75s transform .75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .hide{
-    display: flex;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
 }
 .icon_git{
    z-index: 10;

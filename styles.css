@@ -93,10 +93,6 @@ div{
 .navbar-logo{
     align-self: flex-start;
 }
-section{
-    /* margin: 5rem 2rem; */
-    /* transform: translateX(-2rem); */
-}
 
 .contact_button{
     padding:.75rem 1.5rem;
@@ -357,23 +353,25 @@ footer .socials .icon_socials svg:hover{
 
 .framework{
    /* display:flex ; */
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    min-height: 70vh;
+    align-items: center;
+    min-height: 100vh;
     /* margin: 2rem 4rem; */
+    width: 100vw;
     position: relative;
     display: none;
 }
 .orbit_parent{
     position: relative;
-    height: 30rem;
-    width: 30rem;
-    margin: 1rem;
+    height: 25rem;
+    width: 25rem ;
+    
 }
 .orbit{
     background-color: var(--main-light-color);
-    height: 25rem;
-    width: 25rem;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     position: relative;
     /* transform-origin: center;
@@ -398,7 +396,7 @@ footer .socials .icon_socials svg:hover{
 }
 .orbit1{
     position: absolute;
-    right: 5rem;
+    right: -1rem;
     top: -1rem;
     background-color: var(--btn-color);
     z-index: -1;
@@ -414,7 +412,7 @@ footer .socials .icon_socials svg:hover{
 }
 .orbit2{
     position: absolute;
-    right: 5rem;
+    right: -1rem;
     top: 11rem;
     background-color: var(--btn-color);
     z-index: -1;
@@ -560,14 +558,13 @@ footer{
     position: fixed;
     /* background-color: green; */
     z-index: 100;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     margin: .45rem;
     /* background-color: var(--btn-color-light); */
     border-radius: 40%;
     align-items: center;
-    display: none;
 }
 .position_marker-line{
     border:solid var(--main-text-color) 2px;
@@ -730,38 +727,56 @@ footer{
 .nav_line{
     transition: all ease-in 1s;
 }
-.navbar_mobile-bar:hover{
-    background-color:var(--btn-color);
-   
-}
-.navbar_mobile-bar:hover .nav_line{
-  background-color: white; 
-  
-}
-.navbar_mobile-bar .nav_line:nth-child(1){
+
+.line1{
+    height: 2px;
     width: 16px;
-  }
-  .navbar_mobile-bar .nav_line:nth-child(2){
+    background-color:var(--btn-color);
+    transition: transform 1s ease-in;
+    -webkit-transition: transform 1s ease-in;
+    -moz-transition: transform 1s ease-in;
+    -ms-transition: transform 1s ease-in;
+    -o-transition: transform 1s ease-in;
+}
+  .line2{
     width: 36px;
-  }
-  .navbar_mobile-bar .nav_line:nth-child(3){
+    background-color:var(--btn-color);
+    height: 2px;
+    transition: transform 1s ease-in;
+    -webkit-transition: transform 1s ease-in;
+    -moz-transition: transform 1s ease-in;
+    -ms-transition: transform 1s ease-in;
+    -o-transition: transform 1s ease-in;
+}
+  .line3{
     width: 28px;
-  }
-.navbar_mobile-bar:hover .nav_line:nth-child(1){
+    background-color:var(--btn-color);
+    height: 2px;
+    transition: transform 1s ease-in;
+    -webkit-transition: transform 1s ease-in;
+    -moz-transition: transform 1s ease-in;
+    -ms-transition: transform 1s ease-in;
+    -o-transition: transform 1s ease-in;
+}
+.toggle .line1{
+    background-color:white; 
     transform: rotate(45deg) translateY(-1px) translateX(3px);
     -webkit-transform: rotate(45deg) translateY(-1px) translateX(3px);
     -moz-transform: rotate(45deg) translateY(-1px) translateX(3px);
     -ms-transform: rotate(45deg) translateY(-1px) translateX(3px);
     -o-transform: rotate(45deg) translateY(-1px) translateX(3px);
 }
-.navbar_mobile-bar:hover .nav_line:nth-child(2){
+.toggle .line2{
+    background-color:white;
     transform: rotate(-45deg) ;
     -webkit-transform: rotate(-45deg) ;
     -moz-transform: rotate(-45deg) ;
     -ms-transform: rotate(-45deg) ;
     -o-transform: rotate(-45deg) ;
 }
-.navbar_mobile-bar:hover .nav_line:nth-child(3){
+.toggle{ background-color: var(--btn-color);}
+.toggle .line3{
+    background-color:white;
     transform: rotate(45deg) translateY(-13px) ;
     -webkit-transform: rotate(45deg) translateY(-13px) ;
     -moz-transform: rotate(45deg) translateY(-13px) ;
@@ -774,19 +789,28 @@ footer{
     background-color: #ff1cff;
 } */
 .navbar_mobile{
-    display: flex;
     flex-direction: column;
     align-items: center;
-    display: none;
-    z-index: 10;
+    /*display: none;
+    */z-index: 10;
     height: 100vh;
     width: 40vw;
     position: fixed;
     top: 0;
     right: 0;
+    transform: translateX(120%);
+    transition:1s transform 1s ease-in ;
     padding: 1rem;
     background-color: hsl(0 0% 0% / 0.1);
     backdrop-filter: blur(1rem);
+    -webkit-transition:1s transform 1s ease-in ;
+    -moz-transition:1s transform 1s ease-in ;
+    -ms-transition:1s transform 1s ease-in ;
+    -o-transition:1s transform 1s ease-in ;
+    -webkit-transform: translateX(120%);
+    -moz-transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -o-transform: translateX(120%);
 }
 .navbar_mobile .nav-links{
     flex-direction: column;
@@ -839,33 +863,54 @@ footer{
     width: 1.75rem;
 }
 
+@media (min-width:22.5rem ) and (max-width:27.5rem){
+    .orbit_parent{
+        position: relative;
+        height: 10rem;
+        width: 10rem;
+    }
+}
+@media (max-width:27.5rem){
+    .orbit_parent{
+        position: relative;
+        height: 60%;
+        width: 95%;
+        
+    }
+}
 
 
 @media (max-width:48rem){
- .navbar_mobile-bar{
-     display: flex;
- }
- .navbar-container{
-     display: none;
- }
- .navbar_mobile .navbar-content{
-     display: flex;
- }
- .quote{
-     font-size: 1.25rem;
- }
- .about-me__info{
-    /* height: 3rem; */
-    width:80%;
-}
-.more_about-content{
-    width: 75vw;
- 
-}
-.about-me__image{
-    height: 16rem;
-    width: 16rem;
-}
+    .navbar_mobile-bar{
+        display: flex;
+    }
+    .navbar-container{
+        display: none;
+    }
+    .navbar_mobile .navbar-content{
+        display: flex;
+    }
+    .quote{
+        font-size: 1.25rem;
+    }
+    .about-me__info{
+        /* height: 3rem; */
+        width:80%;
+    }
+    .more_about-content{
+        width: 75vw;
+    
+    }
+    .about-me__image{
+        height: 16rem;
+        width: 16rem;
+    }
+    
+    .hand{
+        display: none;
+    }
+   
+   
 }
 @media(max-width:63.875rem){
     .about-me{
@@ -879,5 +924,8 @@ footer{
 @media(min-width:63.875rem){
     .navbar_mobile{
         display: none;
+    }
+    #position_marker{
+        display: flex;
     }
 }
