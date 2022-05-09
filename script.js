@@ -75,6 +75,7 @@ const navMobile=document.getElementById('navbar_mobile')
 
 const navMobileBar = document.getElementById('navbar_mobile-bar')
 
+
 const navLine = document.getElementById('nav_line')
 function toggleNav() {
     navMobile.classList.toggle('toggle')
@@ -83,4 +84,14 @@ function toggleNav() {
 navMobileBar.addEventListener("click", () => {
     navMobile.classList.toggle('hide')
     navMobileBar.classList.toggle('toggle')
+})
+
+let nav = document.querySelectorAll(".nav")
+
+
+nav.forEach(function (i) {
+    i.addEventListener("click", () => {
+      navMobile.classList.toggle('hide')
+        navMobileBar.classList.toggle('toggle')
+    })
 })

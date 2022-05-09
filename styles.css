@@ -362,6 +362,12 @@ footer .socials .icon_socials svg:hover{
     position: relative;
     display: none;
 }
+.framework p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--btn-color);
+    
+}
 .orbit_parent{
     position: relative;
     height: 25rem;
@@ -379,20 +385,25 @@ footer .socials .icon_socials svg:hover{
     
 }
 .center{
-    /* background-color: var(--main-text-color); */
-    position: absolute;
+    /*background-color: var(--main-text-color);
+    */position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 20%;
-    width: 20%;
+    height: 50%;
+    width: 50%;
     border-radius: inherit;
     display: grid;
     place-content: center;
+    background-image: url('/assets/IMG_20220427_041903_922.jpg');
+    background-size: 100%;
+    background-position: center;
+    
 }
-.icon_center svg{
-    fill: var(--main-text-color);
+.icon_center{
     height: 3rem;
+    width:3rem;
+   
 }
 .orbit1{
     position: absolute;
@@ -433,16 +444,16 @@ li{
 .orbit_object:first-child{
     position: absolute;
     top: 45%;
-    left: 10%;
+    left: 2%;
     /* top: 6rem;
     left: 15rem; */
     background-color: rgba(86, 207, 255, 0.589);
-    
+  
 }
 .orbit_object:nth-child(2){
     position: absolute;
     bottom: 20%;
-    right: 15%;   
+    right: 5%;   
     /* top: 6rem;
     right: 15rem; */
     /* background-color: rgba(5, 85, 235, 0.589); */
@@ -450,22 +461,29 @@ li{
 .orbit_object:nth-child(3){
     position: absolute;
     top: 20%;
-    right: 15%;   
+    right: 5%;   
     /* bottom: 6rem;
     right: 15rem; */
     /* background-color: rgba(5, 85, 235, 0.589); */
+    
 }
 
 .orbit_object:nth-child(4){
     position: absolute;
-    top: 10%;
-    left: 35%;   
+    top: 2%;
+    left: 35%;
+    transform:rotate(-10deg) ;
+    -webkit-transform:rotate(-10deg) ;
+    -moz-transform:rotate(-10deg) ;
+    -ms-transform:rotate(-10deg) ;
+    -o-transform:rotate(-10deg) ;
+   
 }
 .orbit_object:nth-child(5){
     position: absolute;
-    bottom: 10%;
-    left: 35%;   
-
+    bottom: 2%;
+    left: 35%;
+   
 }
 .orbit_objects{
     height: 25rem;
@@ -474,15 +492,25 @@ li{
     position: relative;
     transform-origin: center;
     cursor: pointer;
-    
+    animation: orbit infinite 60s;
+    -webkit-animation: orbit infinite 60s;
 }
 .orbit_objects:hover{
-    animation: orbit 10s linear infinite;
+    animation-play-state: paused;
+}
+.orbit_objects:hover > *{
+    animation-play-state: paused;
 }
 @keyframes orbit {
     100%{
         transform: rotate(360deg);
-        rotate: 1turn;
+        rotate: 0turn;
+    }
+}
+@keyframes orbitChild{
+    100%{
+        transform: rotate(360deg);
+        rotate: 0turn;
     }
 }
 .more_about{
@@ -561,7 +589,7 @@ footer{
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: .45rem;
+  bottom: 20%;
     /* background-color: var(--btn-color-light); */
     border-radius: 40%;
     align-items: center;
@@ -792,9 +820,9 @@ footer{
     flex-direction: column;
     align-items: center;
     /*display: none;
-    */z-index: 10;
+    */z-index: 100;
     height: 100vh;
-    width: 40vw;
+    width: 100vw;
     position: fixed;
     top: 0;
     right: 0;
@@ -814,9 +842,10 @@ footer{
 }
 .navbar_mobile .nav-links{
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     position: absolute;
     margin-top: 5rem;
+    height: 100%;
     
 }
 .navbar_mobile .nav-links li{
@@ -826,10 +855,12 @@ footer{
     border: solid var(--btn-color) 2px;
     background-color: transparent;
     color: var(--btn-color);
+    font-size: 1.15rem;
+    font-weight: 700;
     border-radius: 6px;
     text-transform: uppercase;
     cursor: pointer;
-    margin: 1rem 0;
+    margin: 3rem 0;
     transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
     font-size: 1.2rem;
     
@@ -858,6 +889,7 @@ footer{
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+
 
 .nav_line:nth-child(2){
     width: 1.75rem;
@@ -909,6 +941,7 @@ footer{
     .hand{
         display: none;
     }
+   
    
    
 }
