@@ -13,6 +13,7 @@
     --btn-color-light:#9d57d6fb;
     --variant-color:hsl(273, 62%, 25%);
     --main-light-color:hsl(0, 0%, 11%);
+    --main-gray:rgb(177, 176, 176);
     --brightness:80%;
     --filter-icon: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(105%) contrast(107%);
     --icon:url('./icons/sun.svg');
@@ -42,7 +43,20 @@ html{
    position: fixed;
    z-index: 10;
 }
-
+.toggle_mode-mobile{
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    /* right: 20%;
+    top: 70%; */
+    cursor: pointer;
+    background:var(--icon);
+    background-repeat: no-repeat;
+    filter:var(--filter-icon);
+    -webkit-filter:var(--filter-icon);
+    position: fixed;
+    z-index: 10;
+ }
 .light_mode{
     --main-color:hsl(0, 0%, 90%);
     --main-text-color:#3b3b3b;
@@ -51,6 +65,7 @@ html{
     --filter-icon: filter: brightness(0) saturate(100%) invert(17%) sepia(4%) saturate(13%) hue-rotate(27deg) brightness(99%) contrast(82%);
     --icon:url('./icons/moon.svg');
     --astronaut: url(/assets/lightastronaut.png);
+    --main-gray:rgb(87, 86, 86);
 }
 
 body{
@@ -670,6 +685,7 @@ footer{
 .address{
     width: 50vw;
     text-align: center;
+    font-size: 1.25rem;
 }
 .address_email{
     color:var(--btn-color-light);
@@ -752,7 +768,7 @@ footer{
 .navbar_mobile-bar{
     position: fixed;
     background-color:var(--main-color);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px rgba(48, 47, 47, 0.3);
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -890,6 +906,15 @@ footer{
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
 }
+.navbar_mobile .nav-links li:last-child{
+    border: transparent;
+    
+}
+.navbar_mobile .nav-links li:last-child:hover{
+    border:transparent;
+    background-color:transparent;
+    
+}
 .navbar_mobile .nav-links li a{
     color: var(--btn-color);
 }
@@ -926,18 +951,38 @@ footer{
         height: 10rem;
         width: 10rem;
     }
+    .toggle_mode{
+      display: none;
+     }
+     .toggle_mode-mobile{
+        display: flex;
+       }
+       .address{
+        width: 50vw;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .project_item{
+        margin-left:1rem ;
+        margin-top: 3rem;
+    }
 }
 @media (max-width:27.5rem){
     .orbit_parent{
         position: relative;
         height: 60%;
         width: 95%;
-        
     }
 }
 
 
 @media (max-width:48rem){
+    .toggle_mode{
+        display: none;
+       }
+       .toggle_mode-mobile{
+        display: flex;
+       }
     .navbar_mobile-bar{
         display: flex;
     }
@@ -968,6 +1013,15 @@ footer{
     }
     .position_marker{
         display: none;
+    }
+    .address{
+        width: 50vw;
+        text-align: center;
+        font-size: 1.75rem;
+    }
+    .project_item{
+        margin-left:2rem ;
+        margin-top: 3rem;
     }
    
 }

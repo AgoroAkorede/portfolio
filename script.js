@@ -6,10 +6,14 @@ const positionMarkerLine2 = document.getElementById("position_marker-line2");
 const positionMarkerLine3 = document.getElementById("position_marker-line3");
 const positionMarkerLine4 = document.getElementById("position_marker-line4");
 const positionMarker = document.getElementById("position_marker");
+const secondSection =document.getElementById("skills");
+const thirdSection =document.getElementById("more_about")
+const fourthSection =document.getElementById("projects")
 const preloader = document.getElementById("preloader");
 const mainContent = document.getElementById("main_content");
 const toggleMode = document.getElementById("toggle_mode");
 const root = document.querySelector(":root");
+const toggleModeMobile = document.getElementById("toggle_mode-mobile"); 
 const element = document.body;
 
 function postionMarker1() {
@@ -25,15 +29,16 @@ function postionMarker2() {
     positionMarkerLine2.classList.remove("active");
   }, 3000);
   positionMarkerLine2.classList.add("active");
-
-  window.scrollTo(0, 600);
+  
+  window.scrollTo(0, secondSection.offsetTop);
 }
 function postionMarker3() {
   setTimeout(() => {
     positionMarkerLine3.classList.remove("active");
   }, 3000);
   positionMarkerLine3.classList.add("active");
-  window.scrollTo(0, 1200);
+  window.scrollTo(0, thirdSection.offsetTop);
+
 }
 function postionMarker4() {
   setTimeout(() => {
@@ -41,7 +46,7 @@ function postionMarker4() {
   }, 3000);
   positionMarkerLine4.classList.add("active");
 
-  window.scrollTo(0, 1900);
+  window.scrollTo(0, fourthSection.offsetTop);
 }
 
 function work() {
@@ -104,3 +109,23 @@ const changeBackground = () => {
 };
 
 toggleMode.addEventListener("click", changeBackground);
+toggleModeMobile.addEventListener("click", changeBackground)
+
+console.log(thirdSection.scrollTop);
+
+// -----------loading-----------
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+const obj = document.getElementById("value");
+animateValue(obj, 0, 100, 3000);
