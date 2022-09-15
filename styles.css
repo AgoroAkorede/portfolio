@@ -5,11 +5,54 @@
     scroll-behavior: smooth;
     /* box-sizing: border-box; */
 }
+:root{
+    --main-color:#0f0f0f;
+    --secondary-color:#222222c7;
+    --main-text-color:#e6e6cb;
+    --btn-color:hsl(273, 64%, 52%);
+    --btn-color-light:#9d57d6fb;
+    --variant-color:hsl(273, 62%, 25%);
+    --main-light-color:hsl(0, 0%, 11%);
+    --brightness:80%;
+    --filter-icon: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(105%) contrast(107%);
+    --icon:url('./icons/sun.svg');
+    --astronaut:url(/assets/aboutme-Img1.jpg);
+}
 html{
     min-height: 100%;
     width: 100%;
     overflow-x: hidden;
+    transition: all 3s linear;
+    -webkit-transition: all 3s linear;
+    -moz-transition: all 3s linear;
+    -ms-transition: all 3s linear;
+    -o-transition: all 3s linear;
 }
+.toggle_mode{
+   height: 2rem;
+   width: 2rem;
+   position: absolute;
+   right: 10%;
+   top: 2rem;
+   cursor: pointer;
+   background:var(--icon);
+   background-repeat: no-repeat;
+   filter:var(--filter-icon);
+   -webkit-filter:var(--filter-icon);
+   position: fixed;
+   z-index: 10;
+}
+
+.light_mode{
+    --main-color:hsl(0, 0%, 90%);
+    --main-text-color:#3b3b3b;
+    --main-light-color:hsl(0, 0%, 72%);
+    --brightness:100%;
+    --filter-icon: filter: brightness(0) saturate(100%) invert(17%) sepia(4%) saturate(13%) hue-rotate(27deg) brightness(99%) contrast(82%);
+    --icon:url('./icons/moon.svg');
+    --astronaut: url(/assets/lightastronaut.png);
+}
+
 body{
     background-color: var(--main-color);
     color: var(--main-text-color);
@@ -42,21 +85,7 @@ div{
     display: flex;
     flex-direction: column;
 }
-:root{
-    --main-color:#272727;
 
-    /* light mode */
-    /* --main-color:rgb(155, 151, 151); 
-    --secondary-color:rgba(240, 240, 240, 0.781);
-    --main-text-color:rgb(68, 68, 68); */
-
-    --secondary-color:rgba(34, 34, 34, 0.781);
-    --main-text-color:rgb(230,230,203);
-    --btn-color:hsl(273, 64%, 52%);
-    --btn-color-light:#9d57d6fb;
-    --variant-color:hsl(273, 62%, 25%);
-    --main-light-color:hsl(0, 0%, 25%);
-}
 .navbar-container{
     width: 100vw;
     overflow: none;
@@ -125,7 +154,7 @@ div{
 }
 h1{
     font-size: 2rem;
-    text-align:center ;
+    /* text-align:center ; */
 }
 .about-me{
     display:flex ;
@@ -137,11 +166,11 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     width: 100vw;
     overflow-x: hidden;
-    transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
-    -webkit-transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
-    -moz-transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
-    -ms-transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
-    -o-transition: all 1s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    -webkit-transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    -moz-transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    -ms-transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
+    -o-transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
 }
 .about-me__title{
     width: 10rem;
@@ -218,7 +247,8 @@ footer .socials .icon_socials svg:hover{
 }
 .about-me__info{
     /* height: 3rem; */
-    width:60%;
+    width:65%;
+    margin-left:1.5rem;
 
 }
 
@@ -523,15 +553,13 @@ li{
     margin: 0;
     min-height: 100vh;
     position: relative;
-    /* width: 110vw; */
     overflow: visible;
-    /* transform: translateX(2rem); */
-    /* background-color: var(--main-light-color); */
-    background-image: url('https://thumbs.dreamstime.com/b/astronaut-floating-cosmos-vector-illustration-planets-stars-background-spaceman-spacesuit-white-black-doodle-art-151864337.jpg');
-    /* background-repeat: no-repeat;
-    background-size: 100%; */
-    filter: brightness(50%);
+    background-image:var(--astronaut);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(var(--brightness));
     position: relative;
+    -webkit-filter: brightness(var(--brightness));
 }
 .more_about p{
     /* text-align: center; */
@@ -540,7 +568,7 @@ li{
 }
 .more_about-title{
     /* color: var(--btn-color); */
-    color: #ffffff;
+    color: var(--main-text-color);
     margin: 1rem;
 }
 .more_about-content{
@@ -584,13 +612,11 @@ footer{
     height: 4rem;
     width: 4rem;
     position: fixed;
-    /* background-color: green; */
     z-index: 100;
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
   bottom: 20%;
-    /* background-color: var(--btn-color-light); */
     border-radius: 40%;
     align-items: center;
 }
@@ -686,9 +712,10 @@ footer{
     height: .5rem;
     width: 4rem;
     background-color: var(--secondary-color);
-    animation: 5s loadingAnimation infinite backwards;
+    animation: 10s loadingAnimation infinite backwards;
     border-radius: 3px;
     margin-right: .5rem;
+    -webkit-animation: 10s loadingAnimation infinite backwards;
 }
 @keyframes loadingAnimation {
     25%{
@@ -721,7 +748,6 @@ footer{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* media queries */
 
 .navbar_mobile-bar{
     position: fixed;
@@ -746,45 +772,45 @@ footer{
     cursor: pointer;
     display: none;
     border: none;
-    transition: all ease-in 1s;
-    -webkit-transition: all ease-in 1s;
-    -moz-transition: all ease-in 1s;
-    -ms-transition: all ease-in 1s;
-    -o-transition: all ease-in 1s;
+    transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -ms-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
 }
 .nav_line{
-    transition: all ease-in 1s;
+    transition: all ease-in 0.4s;
 }
 
 .line1{
     height: 2px;
     width: 16px;
     background-color:var(--btn-color);
-    transition: transform 1s ease-in;
-    -webkit-transition: transform 1s ease-in;
-    -moz-transition: transform 1s ease-in;
-    -ms-transition: transform 1s ease-in;
-    -o-transition: transform 1s ease-in;
+    transition: transform 0.4s ease-in;
+    -webkit-transition: transform 0.4s ease-in;
+    -moz-transition: transform 0.4s ease-in;
+    -ms-transition: transform 0.4s ease-in;
+    -o-transition: transform 0.4s ease-in;
 }
   .line2{
     width: 36px;
     background-color:var(--btn-color);
     height: 2px;
-    transition: transform 1s ease-in;
-    -webkit-transition: transform 1s ease-in;
-    -moz-transition: transform 1s ease-in;
-    -ms-transition: transform 1s ease-in;
-    -o-transition: transform 1s ease-in;
+    transition: transform 0.4s ease-in;
+    -webkit-transition: transform 0.4s ease-in;
+    -moz-transition: transform 0.4s ease-in;
+    -ms-transition: transform 0.4s ease-in;
+    -o-transition: transform 0.4s ease-in;
 }
   .line3{
     width: 28px;
     background-color:var(--btn-color);
     height: 2px;
-    transition: transform 1s ease-in;
-    -webkit-transition: transform 1s ease-in;
-    -moz-transition: transform 1s ease-in;
-    -ms-transition: transform 1s ease-in;
-    -o-transition: transform 1s ease-in;
+    transition: transform 0.4s ease-in;
+    -webkit-transition: transform 0.4s ease-in;
+    -moz-transition: transform 0.4s ease-in;
+    -ms-transition: transform 0.4s ease-in;
+    -o-transition: transform 0.4s ease-in;
 }
 .toggle .line1{
     background-color:white; 
@@ -811,11 +837,7 @@ footer{
     -ms-transform: rotate(45deg) translateY(-13px) ;
     -o-transform: rotate(45deg) translateY(-13px) ;
 }
-/* .navbar_mobile{
-    position: absolute;
-    right: 0;
-    background-color: #ff1cff;
-} */
+
 .navbar_mobile{
     flex-direction: column;
     align-items: center;
@@ -827,14 +849,14 @@ footer{
     top: 0;
     right: 0;
     transform: translateX(120%);
-    transition:1s transform 1s ease-in ;
+    transition:0.4s transform 0.4s ease-in ;
     padding: 1rem;
     background-color: hsl(0 0% 0% / 0.1);
     backdrop-filter: blur(1rem);
-    -webkit-transition:1s transform 1s ease-in ;
-    -moz-transition:1s transform 1s ease-in ;
-    -ms-transition:1s transform 1s ease-in ;
-    -o-transition:1s transform 1s ease-in ;
+    -webkit-transition:0.4s transform 0.4s ease-in ;
+    -moz-transition:0.4s transform 0.4s ease-in ;
+    -ms-transition:0.4s transform 0.4s ease-in ;
+    -o-transition:0.4s transform 0.4s ease-in ;
     -webkit-transform: translateX(120%);
     -moz-transform: translateX(120%);
     -ms-transform: translateX(120%);
@@ -857,13 +879,16 @@ footer{
     color: var(--btn-color);
     font-size: 1.15rem;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 16px;
     text-transform: uppercase;
     cursor: pointer;
     margin: 3rem 0;
     transition: 3s all cubic-bezier(0.165, 0.84, 0.44, 1);
     font-size: 1.2rem;
-    
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
 }
 .navbar_mobile .nav-links li a{
     color: var(--btn-color);
@@ -941,8 +966,9 @@ footer{
     .hand{
         display: none;
     }
-   
-   
+    .position_marker{
+        display: none;
+    }
    
 }
 @media(max-width:63.875rem){
@@ -958,7 +984,5 @@ footer{
     .navbar_mobile{
         display: none;
     }
-    #position_marker{
-        display: flex;
-    }
+   
 }

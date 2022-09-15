@@ -28,7 +28,7 @@
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
-    box-shadow: #1f1f1f 3px 5px 6px;
+    box-shadow: var(--main-color) 3px 5px 6px;
     overflow: hidden;
 }
 .project_item img{
@@ -43,11 +43,10 @@
     -moz-border-radius: inherit;
     -ms-border-radius: inherit;
     -o-border-radius: inherit;
-    */
-    filter: blur(1px) brightness(70%);
+    */filter: blur(1px) brightness(var(--brightness));
     cursor: pointer;
     transition:filter 0.75s  ;
-
+    -webkit-filter: blur(1px) brightness(70%);
 }
 @keyframes reduceBrightness{
     0%{
