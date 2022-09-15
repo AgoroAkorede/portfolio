@@ -389,7 +389,11 @@ footer .socials .icon_socials svg:hover{
     color: var(--btn-color);
     font-weight: 700;
     text-align: center;
+}.skills_greeting h1{
+   
+    text-align: center;
 }
+
 
 .skills_info{
     padding: 1rem ;
@@ -572,6 +576,7 @@ li{
     background-image:var(--astronaut);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: 50%;
     filter: brightness(var(--brightness));
     position: relative;
     -webkit-filter: brightness(var(--brightness));
@@ -637,8 +642,8 @@ footer{
 }
 .position_marker-line{
     border:solid var(--main-text-color) 2px;
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
     border-radius: 50%;
     cursor: pointer;
     transition: width 3s ;
@@ -646,6 +651,21 @@ footer{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+.position_marker-linedown{
+    height: 1.1rem;
+    width: 1.1rem;
+    position: fixed;
+    bottom: 17.5%;
+    left: 1.42rem;
+    z-index: 100;
+    cursor: pointer;
+}
+.position_marker-linedown img{
+    height: 100%;
+    width: 100%;
+    filter: var(--filter-icon);
+    -webkit-filter: var(--filter-icon);
 }
 .active{
    border:solid var(--btn-color-light) 2px;
@@ -965,6 +985,9 @@ footer{
     .project_item{
         margin-left:1rem ;
         margin-top: 3rem;
+    }
+    .more_about{
+        background-size: 175%;
     }
 }
 @media (max-width:27.5rem){

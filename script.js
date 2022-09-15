@@ -6,6 +6,8 @@ const positionMarkerLine2 = document.getElementById("position_marker-line2");
 const positionMarkerLine3 = document.getElementById("position_marker-line3");
 const positionMarkerLine4 = document.getElementById("position_marker-line4");
 const positionMarker = document.getElementById("position_marker");
+const positionMarkerLineDown = document.getElementById("position_marker-line5");
+
 const secondSection =document.getElementById("skills");
 const thirdSection =document.getElementById("more_about")
 const fourthSection =document.getElementById("projects")
@@ -48,6 +50,9 @@ function postionMarker4() {
 
   window.scrollTo(0, fourthSection.offsetTop);
 }
+function postionMarker5() {
+window.scrollTo(0, 20000);
+}
 
 function work() {
   const framework = document.getElementById("framework");
@@ -63,6 +68,7 @@ positionMarkerLine1.addEventListener("click", postionMarker1);
 positionMarkerLine2.addEventListener("click", postionMarker2);
 positionMarkerLine3.addEventListener("click", postionMarker3);
 positionMarkerLine4.addEventListener("click", postionMarker4);
+positionMarkerLineDown.addEventListener("click", postionMarker5);
 
 window.addEventListener("load", function () {
   preloader.style.display = "none";
