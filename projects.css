@@ -97,13 +97,13 @@
 .project_item .title{
     position: absolute;
     top: 1.5%;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     left: 1rem;
 }
 .project_item .info{
     color: var(--btn-color);
     position: absolute;
-    font-size: .9rem;
+    /* font-size: .9rem; */
     left: 2rem;
     top:10%;
 }
@@ -193,4 +193,16 @@
    -moz-transition: transform .75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
    -ms-transition: transform .75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
    -o-transition: transform .75s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+@media (min-width:22.5rem ) and (max-width:27.5rem){
+    .project_item{
+        height: 15rem;
+        width: 10rem;
+    }
+    .stack_item{
+        font-size: .7rem;
+    }
+    .info{
+        font-size: .7rem;
+    }
 }

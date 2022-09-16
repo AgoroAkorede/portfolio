@@ -321,7 +321,7 @@ footer .socials .icon_socials svg:hover{
     
 }
 .about-me__info .name{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     font-weight: 600;
     overflow: hidden;
     border-right: .15em solid white;
@@ -421,7 +421,6 @@ footer .socials .icon_socials svg:hover{
     position: relative;
     height: 25rem;
     width: 25rem ;
-    
 }
 .orbit{
     background-color: var(--main-light-color);
@@ -444,8 +443,9 @@ footer .socials .icon_socials svg:hover{
     border-radius: inherit;
     display: grid;
     place-content: center;
-    background-image: url('/assets/IMG_20220427_041903_922.jpg');
+    background-image: url('/icons/programmer.png');
     background-size: 100%;
+    background-repeat: no-repeat;
     background-position: center;
     
 }
@@ -465,7 +465,7 @@ footer .socials .icon_socials svg:hover{
     border-radius: 50%;
 }
 .orbit_object img{
-    height: 3rem;
+    height: 2rem;
 }
 .orbit_object .img{
     height: 5rem;
@@ -487,12 +487,12 @@ li{
     border-radius: 50%;
     display: grid;
     place-content: center;
-    height: 4rem;
-    width: 4rem;
+    height: 2.5rem;
+    width: 2.5rem;
 }
 .orbit_object:first-child{
     position: absolute;
-    top: 45%;
+    top: 35%;
     left: 2%;
     /* top: 6rem;
     left: 15rem; */
@@ -530,8 +530,14 @@ li{
 }
 .orbit_object:nth-child(5){
     position: absolute;
+    bottom: 5%;
+    left: 20%;
+   
+}
+.orbit_object:nth-child(6){
+    position: absolute;
     bottom: 2%;
-    left: 35%;
+    left: 60%;
    
 }
 .orbit_objects{
@@ -982,19 +988,59 @@ footer{
         text-align: center;
         font-size: 2rem;
     }
-    .project_item{
-        margin-left:1rem ;
-        margin-top: 3rem;
-    }
     .more_about{
         background-size: 175%;
+    }
+    .about-me__info-header{
+        font-size: 1.2rem;
+    }
+    .name{
+        font-size: .8rem;
+    }
+    .about-me__text{
+        font-size: .65rem;
+    }
+    .about-me_greeting{
+        font-size: 1.5rem;
+    }
+    .contact_button{
+        width: 6rem;
+        height: 2rem;
+        font-size: .6rem;
+        padding: .5rem .75rem;
+    }
+    .icon_socials svg{
+        height: 1em;
+    }
+    .more_about-content{
+        font-size: .8rem;
+    }
+    .more_about-content p{
+        font-size: .8rem;
+    }
+    .skills{
+        min-height: fit-content;
+    }
+    .more_about{
+        min-height: fit-content;
     }
 }
 @media (max-width:27.5rem){
     .orbit_parent{
         position: relative;
-        height: 60%;
-        width: 95%;
+        height: 22.5rem;
+        width: 22.5rem ;
+    }
+    .orbit_objects{
+        height: 22rem;
+        width: 22rem 
+    }
+    .orbit1{
+        right: .5rem;
+    }
+    .orbit2{
+        right: 1rem;
+        bottom: 3rem;
     }
 }
 
@@ -1061,5 +1107,9 @@ footer{
     .navbar_mobile{
         display: none;
     }
+    /* .project_item{
+        height: 25rem;
+        width: 20rem;
+    } */
    
 }
