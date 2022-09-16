@@ -575,6 +575,7 @@ li{
     align-items: center;
     flex-direction: column;
     background-color:var(--main-color) ;
+    padding: 2rem;
     margin: 0;
     min-height: 100vh;
     position: relative;
@@ -1041,6 +1042,21 @@ footer{
     .orbit2{
         right: 1rem;
         bottom: 3rem;
+    }
+    .navbar_mobile-bar{
+        cursor: default;
+    }
+    .position_marker-line{
+        cursor: default;
+    }
+    .toggle_mode-mobile{
+        cursor: default;
+    }
+    .contact_button{
+        cursor: default;
+    }
+    .navbar_mobile .nav-links li{
+        cursor: default;
     }
 }
 
