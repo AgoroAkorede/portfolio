@@ -134,14 +134,3 @@ function animateValue(obj, start, end, duration) {
 
 const obj = document.getElementById("value");
 animateValue(obj, 0, 100, 3000);
-
-console.log(document.querySelectorAll('button'));
-const buttons =document.querySelectorAll('button')
-
-buttons.forEach((i)=>{
-  i.addEventListener("click",(e)=>{
-    e.preventDefault()
-    console.log('working');
-    
-  })
-})

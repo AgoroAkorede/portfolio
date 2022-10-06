@@ -23,8 +23,8 @@
     *//*align-items: center;
     */background-color:var(--main-color) ;
     padding: 2rem;
-    height: 25rem;
-    width: 20rem;
+    height: 22.5rem;
+    width: 17rem;
     /* margin-left:5vw ;
     margin-top: 12.5vh; */
     margin: 2.5vw;
@@ -45,11 +45,12 @@
 }
 .project_item img{
     height: 60%;
-    width: 100%;
+    width: 150%;
     position: absolute;
     top: 25%;
     /*left: 1.35rem;
-    */left: 0;
+    */
+    left: -25%;
     /*border-radius: inherit;
     -webkit-border-radius: inherit;
     -moz-border-radius: inherit;
@@ -103,18 +104,23 @@
 .project_item .info{
     color: var(--btn-color);
     position: absolute;
-    /* font-size: .9rem; */
-    left: 2rem;
+    font-size: .9rem;
+    left: 3rem;
     top:10%;
 }
 .project_item .effect{
-   height: 2rem;
-   width: .2rem;
+   height: 3.5rem;
+   width: 2px;
    position: absolute;
    top: 10%;
    left: 6.5%;
    background-color: var(--main-text-color);
    z-index: 1;
+   border-radius: 2px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   -ms-border-radius: 2px;
+   -o-border-radius: 2px;
 }
 
 
@@ -128,26 +134,30 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    margin:0 1rem;
     align-items: center;
 }
 .stack_item{
     background-color: var(--btn-color);
     padding: .5rem;
     border-radius: .25rem;
+    /* width: 3rem; */
+    justify-content: center;
+    align-items: center;
     -webkit-border-radius: .25rem;
     -moz-border-radius: .25rem;
     -ms-border-radius: .25rem;
     -o-border-radius: .25rem;
     margin: .5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: .7rem;
+    font-weight: 400;
     color: var(--main-color);
 }
 .icon_globe{
     z-index: 10;
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 33%;
     height: 2.75rem;
     width: 2.75rem;
     background-image: url(/icons/globe-solid.svg);
@@ -176,7 +186,7 @@
    z-index: 10;
    position: absolute;
    top: 50%;
-   left: 50%;
+   left: 66%;
    height: 2.75rem;
    width: 2.75rem;
    background-image: url(/icons/github-brands.svg);
@@ -204,5 +214,10 @@
     }
     .info{
         font-size: .7rem;
+    }
+}
+@media (max-width:27.5rem){
+    .project_item img{
+        cursor: default;
     }
 }

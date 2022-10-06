@@ -33,7 +33,7 @@ html{
    height: 2rem;
    width: 2rem;
    position: absolute;
-   right: 10%;
+   right: 5%;
    top: 2rem;
    cursor: pointer;
    background:var(--icon);
@@ -95,6 +95,7 @@ body::-webkit-scrollbar {
 a{
     text-decoration :none;
     color:var(--main-text-color);
+    cursor: default;
 }
 div{
     display: flex;
@@ -240,11 +241,10 @@ h1{
     height: 2rem;
     margin: .5rem;
     object-fit: contain;
-    /*filter: invert(1) sepia(0) saturate(130%) hue-rotate(10deg);
-    */fill: rgb(24, 23, 23);
-    cursor: pointer;
-  
+    fill: rgb(24, 23, 23);
+    /* cursor: pointer; */
 }
+
 .icon_socials:hover{
   fill: var(--btn-color);
  
@@ -596,7 +596,7 @@ li{
 .more_about-title{
     /* color: var(--btn-color); */
     color: var(--main-text-color);
-    margin: 1rem;
+    margin: 2rem;
 }
 .more_about-content{
     width: 45vw;
@@ -708,15 +708,18 @@ footer{
     width: 100vw;
     overflow: visible;
     justify-self: start;
+    padding-top: 2rem;
 }
 .address{
     width: 50vw;
     text-align: center;
     font-size: 1.25rem;
+    height: 15vh;
 }
 .address_email{
     color:var(--btn-color-light);
     text-decoration: none;
+    cursor: pointer;
 }
 .address_quote{
     margin: 3rem 0;
@@ -1029,19 +1032,20 @@ footer{
 @media (max-width:27.5rem){
     .orbit_parent{
         position: relative;
-        height: 22.5rem;
-        width: 22.5rem ;
+        height: 20.5rem;
+        width: 20.5rem ;
     }
     .orbit_objects{
-        height: 22rem;
-        width: 22rem 
+        height: 20rem;
+        width: 20rem;
+        cursor:default;
     }
     .orbit1{
         right: .5rem;
     }
     .orbit2{
         right: 1rem;
-        bottom: 3rem;
+        top: 7rem;
     }
     .navbar_mobile-bar{
         cursor: default;
@@ -1058,6 +1062,7 @@ footer{
     .navbar_mobile .nav-links li{
         cursor: default;
     }
+  
 }
 
 
@@ -1123,6 +1128,7 @@ footer{
     .navbar_mobile{
         display: none;
     }
+    
     /* .project_item{
         height: 25rem;
         width: 20rem;
