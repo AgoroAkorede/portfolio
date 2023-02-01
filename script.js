@@ -55,9 +55,9 @@ function work() {
   const framework = document.getElementById("framework");
   if (framework.style.display === "flex") {
     framework.style.display = "none";
-    moreSkills.innerHTML = "see more"
+    moreSkills.innerHTML = "see more";
   } else {
-    moreSkills.innerHTML = "see less"
+    moreSkills.innerHTML = "see less";
     framework.style.display = "flex";
   }
 }
@@ -118,26 +118,35 @@ toggleModeMobile.addEventListener("click", changeBackground);
 
 // -----------loading-----------
 
-const before_loadtime = new Date().getTime();
+// const before_loadtime = new Date().getTime();
 
+// function animateValue(obj, start, end, duration) {
+
+//   let startTimestamp = null;
+//   const step = (timestamp) => {
+//     if (!startTimestamp) startTimestamp = timestamp;
+//     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+//     obj.innerHTML = Math.floor(progress * (end - start) + start);
+//     if (progress < 1) {
+//       window.requestAnimationFrame(step);
+//     }
+//   };
+//   window.requestAnimationFrame(step);
+
+// }
+
+// animateValue(obj, 0, 100, 3000);
 
 function animateValue(obj, start, end, duration) {
-
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
-    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    obj.innerHTML = Math.floor(progress * (end - start) + start);
-    if (progress < 1) {
-      window.requestAnimationFrame(step);
-    }
+    function animateValue(obj, start, end, duration) {}
   };
   window.requestAnimationFrame(step);
-
 }
 
+const obj = document.getElementById("value");
 animateValue(obj, 0, 100, 3000);
 
 
-
-//------------------------- GSAP --------------------------
