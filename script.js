@@ -1,6 +1,4 @@
-"use strict";
 const moreSkills = document.querySelector("#Button");
-
 const positionMarkerLine1 = document.getElementById("position_marker-line1");
 const positionMarkerLine2 = document.getElementById("position_marker-line2");
 const positionMarkerLine3 = document.getElementById("position_marker-line3");
@@ -8,14 +6,14 @@ const positionMarkerLine4 = document.getElementById("position_marker-line4");
 const positionMarker = document.getElementById("position_marker");
 const positionMarkerLineDown = document.getElementById("position_marker-line5");
 
-const secondSection =document.getElementById("skills");
-const thirdSection =document.getElementById("more_about")
-const fourthSection =document.getElementById("projects")
+const secondSection = document.getElementById("skills");
+const thirdSection = document.getElementById("more_about");
+const fourthSection = document.getElementById("projects");
 const preloader = document.getElementById("preloader");
 const mainContent = document.getElementById("main_content");
 const toggleMode = document.getElementById("toggle_mode");
 const root = document.querySelector(":root");
-const toggleModeMobile = document.getElementById("toggle_mode-mobile"); 
+const toggleModeMobile = document.getElementById("toggle_mode-mobile");
 const element = document.body;
 
 function postionMarker1() {
@@ -31,7 +29,7 @@ function postionMarker2() {
     positionMarkerLine2.classList.remove("active");
   }, 3000);
   positionMarkerLine2.classList.add("active");
-  
+
   window.scrollTo(0, secondSection.offsetTop);
 }
 function postionMarker3() {
@@ -40,7 +38,6 @@ function postionMarker3() {
   }, 3000);
   positionMarkerLine3.classList.add("active");
   window.scrollTo(0, thirdSection.offsetTop);
-
 }
 function postionMarker4() {
   setTimeout(() => {
@@ -51,14 +48,16 @@ function postionMarker4() {
   window.scrollTo(0, fourthSection.offsetTop);
 }
 function postionMarker5() {
-window.scrollTo(0, 20000);
+  window.scrollTo(0, 20000);
 }
 
 function work() {
   const framework = document.getElementById("framework");
   if (framework.style.display === "flex") {
     framework.style.display = "none";
+    moreSkills.innerHTML = "see more"
   } else {
+    moreSkills.innerHTML = "see less"
     framework.style.display = "flex";
   }
 }
@@ -111,15 +110,19 @@ const changeBackground = () => {
   setTimeout(() => {
     element.classList.toggle("light_mode");
     toggleIcon.classList.remove("toggle_mode");
-  }, 1000);
+  }, 2000);
 };
 
 toggleMode.addEventListener("click", changeBackground);
-toggleModeMobile.addEventListener("click", changeBackground)
-
+toggleModeMobile.addEventListener("click", changeBackground);
 
 // -----------loading-----------
+
+const before_loadtime = new Date().getTime();
+
+
 function animateValue(obj, start, end, duration) {
+
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
@@ -130,7 +133,11 @@ function animateValue(obj, start, end, duration) {
     }
   };
   window.requestAnimationFrame(step);
+
 }
 
-const obj = document.getElementById("value");
 animateValue(obj, 0, 100, 3000);
+
+
+
+//------------------------- GSAP --------------------------

@@ -7,13 +7,14 @@
 }
 :root{
     --main-color:#0f0f0f;
+    --main-color-inverted: #fff;
     --secondary-color:#222222c7;
     --main-text-color:#e6e6cb;
-    --btn-color:hsl(273, 64%, 52%);
-    --btn-color-light:#9d57d6fb;
-    --variant-color:hsl(273, 62%, 25%);
+    --btn-color: #2a78fe;
+    --btn-color-light:hsl(218, 92%, 62%);
+    --variant-color: hsl(218, 55%, 36%);
     --main-light-color:hsl(0, 0%, 11%);
-    --main-gray:rgb(177, 176, 176);
+    --main-gray:rgb(101, 101, 101);
     --brightness:80%;
     --filter-icon: brightness(0) saturate(100%) invert(94%) sepia(0%) saturate(0%) hue-rotate(263deg) brightness(105%) contrast(107%);
     --icon:url('./icons/sun.svg');
@@ -66,6 +67,7 @@ html{
     --icon:url('./icons/moon.svg');
     --astronaut: url(/assets/lightastronaut.png);
     --main-gray:rgb(87, 86, 86);
+    --main-color-inverted: #0f0f0f;
 }
 
 body{
@@ -419,8 +421,8 @@ footer .socials .icon_socials svg:hover{
 }
 .orbit_parent{
     position: relative;
-    height: 25rem;
-    width: 25rem ;
+    height: 26rem;
+    width: 26rem ;
 }
 .orbit{
     background-color: var(--main-light-color);
@@ -595,7 +597,7 @@ li{
 }
 .more_about-title{
     /* color: var(--btn-color); */
-    color: var(--main-text-color);
+    color: var(--btn-color);
     margin: 2rem;
 }
 .more_about-content{
@@ -608,7 +610,7 @@ li{
     border-radius: 10px;
 }
 .more_about-content .special{
-    color: #ff1cff;
+    color: var(--btn-color);
     font-weight: 600;
     transition: .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     -webkit-transition: .5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -720,6 +722,7 @@ footer{
     color:var(--btn-color-light);
     text-decoration: none;
     cursor: pointer;
+    -webkit-text-stroke: .3px var(--main-color-inverted);
 }
 .address_quote{
     margin: 3rem 0;

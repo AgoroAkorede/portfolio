@@ -19,15 +19,11 @@
 .project_item {
   display: flex;
   flex-direction: column;
-  /*justify-content: center;
-    */ /*align-items: center;
-    */
   background-color: var(--main-color);
-  padding: 2rem;
-  height: 22.5rem;
-  width: 17rem;
-  /* margin-left:5vw ;
-    margin-top: 12.5vh; */
+  padding: 3rem;
+  height: 15rem;
+  width: 20rem;
+
   margin: 2.5vw;
   border-radius: 1rem;
   transition: all 3s linear;
@@ -47,23 +43,15 @@
   -o-transition: all 3s linear;
 }
 .project_item img {
-  height: 60%;
+  height: 40%;
   width: 150%;
   position: absolute;
   top: 25%;
-  /*left: 1.35rem;
-    */
   left: -25%;
-  /*border-radius: inherit;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    -ms-border-radius: inherit;
-    -o-border-radius: inherit;
-    */
   filter: blur(1px) brightness(var(--brightness));
   cursor: pointer;
   transition: filter 0.75s;
-  -webkit-filter: blur(1px) brightness(70%);
+  -webkit-filter: blur(1px) brightness(var(--brightness));
 }
 @keyframes reduceBrightness {
   0% {
@@ -101,19 +89,21 @@
 }
 .project_item .title {
   position: absolute;
-  top: 1.5%;
+  top: 2.5%;
   /* font-size: 1.25rem; */
   left: 1rem;
 }
 .project_item .info {
   color: var(--btn-color);
   position: absolute;
-  /* font-size: 0.9rem; */
-  left: 3rem;
+  font-size: 0.75rem;
+  left: 2.5rem;
   top: 10%;
+  width: 70%;
+  overflow: hidden;
 }
 .project_item .effect {
-  height: 3.5rem;
+  height: 2rem;
   width: 2px;
   position: absolute;
   top: 10%;
@@ -130,26 +120,32 @@
 .stack {
   position: absolute;
   bottom: 0.5rem;
-  left: 0.5rem;
+  left: 1rem;
   width: 80%;
-  height: 10%;
-  display: flex;
-  justify-content: space-evenly;
+  height: auto;
+  display: grid;
+  /* justify-content: space-evenly; */
   flex-direction: row;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
   align-items: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto auto auto auto;
+  flex-wrap: wrap;
 }
 .stack_item {
   background-color: var(--btn-color);
   padding: 0.5rem;
   border-radius: 0.25rem;
-  /* width: 3rem; */
   justify-content: center;
   align-items: center;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  height: fit-content;
   margin: 0.5rem;
   font-size: 0.7rem;
   font-weight: 400;
@@ -158,15 +154,15 @@
 .icon_globe {
   z-index: 10;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 33%;
   height: 2.75rem;
   width: 2.75rem;
   background-image: url(/icons/globe-solid.svg);
-  filter: brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%)
-    hue-rotate(270deg) brightness(106%) contrast(109%);
-  -webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(84%)
-    saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(39%) saturate(4541%)
+    hue-rotate(208deg) brightness(102%) contrast(99%);
+  -webkit-filter: brightness(0) saturate(100%) invert(37%) sepia(39%)
+    saturate(4541%) hue-rotate(208deg) brightness(102%) contrast(99%);
   cursor: pointer;
   transform: translateX(-1000%);
   -webkit-transform: translateX(-1000%);
@@ -190,15 +186,15 @@
 .icon_git {
   z-index: 10;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 66%;
   height: 2.75rem;
   width: 2.75rem;
   background-image: url(/icons/github-brands.svg);
-  filter: brightness(0) saturate(100%) invert(19%) sepia(84%) saturate(5283%)
-    hue-rotate(270deg) brightness(106%) contrast(109%);
-  -webkit-filter: brightness(0) saturate(100%) invert(19%) sepia(84%)
-    saturate(5283%) hue-rotate(270deg) brightness(106%) contrast(109%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(39%) saturate(4541%)
+    hue-rotate(208deg) brightness(102%) contrast(99%);
+  -webkit-filter: brightness(0) saturate(100%) invert(37%) sepia(39%)
+    saturate(4541%) hue-rotate(208deg) brightness(102%) contrast(99%);
   cursor: pointer;
   transform: translateX(-1000%);
   -webkit-transform: translateX(-1000%);
@@ -224,6 +220,10 @@
     display: -webkit-box;
     white-space: normal;
     height: 1.5rem;
+  }
+  .stack{
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
   }
   .stack_item {
     font-size: 0.7rem;

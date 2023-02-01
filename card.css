@@ -71,7 +71,7 @@ svg {
   fill: var(--btn-color);
 }
 .skills_card:last-child {
-  transform: rotate(-4deg) translate(10%, -10%);
+  /* transform: rotate(-4deg) translate(10%, -10%); */
   /* transform: ; */
 }
 
