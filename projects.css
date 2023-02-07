@@ -7,6 +7,7 @@
   width: 100vw;
   /* height: 60vh; */
   flex-wrap: wrap;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .value {
@@ -42,16 +43,81 @@
   -ms-transition: all 3s linear;
   -o-transition: all 3s linear;
 }
-.project_item img {
-  height: 40%;
-  width: 150%;
+.project_item .img1 {
   position: absolute;
+  height: 10rem;
+  width: 100%;
+  left: 1px;
   top: 25%;
-  left: -25%;
   filter: blur(1px) brightness(var(--brightness));
   cursor: pointer;
   transition: filter 0.75s;
   -webkit-filter: blur(1px) brightness(var(--brightness));
+  background-image: url(/assets/hulu.png);
+  background-size: 100%;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.project_item .img2 {
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  left: -1%;
+  top: 25%;
+  filter: blur(1px) brightness(var(--brightness));
+  cursor: pointer;
+  transition: filter 0.75s;
+  -webkit-filter: blur(1px) brightness(var(--brightness));
+  background-image: url(/assets/DrawingApp.png);
+  background-size: 100%;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.project_item .img3 {
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  left: -1%;
+  top: 25%;
+  filter: blur(1px) brightness(var(--brightness));
+  cursor: pointer;
+  transition: filter 0.75s;
+  -webkit-filter: blur(1px) brightness(var(--brightness));
+  background-image: url(/assets/weatherapp.png);
+  background-size: 100%;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.project_item .img4 {
+  position: absolute;
+  height: 10rem;
+  width: 100%;
+  left: -1%;
+  top: 25%;
+  filter: blur(1px) brightness(var(--brightness));
+  cursor: pointer;
+  transition: filter 0.75s;
+  -webkit-filter: blur(1px) brightness(var(--brightness));
+  background-image: url(/assets/google.png);
+  background-size: 100%;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
 @keyframes reduceBrightness {
   0% {
@@ -67,9 +133,12 @@
     -webkit-filter: brightness(0.4);
   }
 }
-.project_item:hover img {
-  animation: 6s linear reduceBrightness;
-  -webkit-animation: 6s linear reduceBrightness;
+.project_item:hover .img1,
+.project_item:hover .img2,
+.project_item:hover .img3,
+.project_item:hover .img4 {
+  animation: 7s linear reduceBrightness;
+  -webkit-animation: 7s linear reduceBrightness;
 }
 .project_item:hover .icon_globe {
   display: flex;
@@ -90,7 +159,8 @@
 .project_item .title {
   position: absolute;
   top: 2.5%;
-  /* font-size: 1.25rem; */
+  font-size: 1.25rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   left: 1rem;
 }
 .project_item .info {
@@ -119,7 +189,7 @@
 
 .stack {
   position: absolute;
-  bottom: 0.5rem;
+  bottom: -0.25rem;
   left: 1rem;
   width: 80%;
   height: auto;
@@ -221,7 +291,7 @@
     white-space: normal;
     height: 1.5rem;
   }
-  .stack{
+  .stack {
     grid-template-rows: auto auto;
     grid-template-columns: auto auto auto;
   }

@@ -30,6 +30,9 @@ html{
     -ms-transition: all 3s linear;
     -o-transition: all 3s linear;
 }
+.boby{
+    font-family:  'Courier New', Courier, monospace;
+}
 .toggle_mode{
    height: 2rem;
    width: 2rem;
@@ -177,10 +180,9 @@ h1{
 .about-me{
     display:flex ;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100vw;
-    min-height: 70vh;
-    margin: 2rem;
+    min-height: 75vh;
     font-family: 'Courier New', Courier, monospace;
     width: 100vw;
     overflow-x: hidden;
@@ -191,17 +193,19 @@ h1{
     -o-transition: all 0.4s cubic-bezier(0.55, 0.055, 0.675, 0.19) ;
 }
 .about-me__title{
-    width: 10rem;
     height: 50%;
-    /* text-align: center; */
     overflow-x: hidden;
 }
 .about-me__info .name{
-    width: 60%;
+    width: 70%;
 }
 .about-me__name{
     height:90%;
     width: 40%;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-me__special{
@@ -218,18 +222,18 @@ h1{
     padding:1rem 0rem;
 }
 .about-me__image{
-    height: 12rem;
-    width: 12rem;
+    height: 16rem;
+    width: 15rem;
     position: relative;
     background-image: url(/assets/korede.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin: .5rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    margin: 1rem 7rem;
 }
 .socials{
     display: flex;
@@ -263,10 +267,9 @@ footer .socials .icon_socials svg:hover{
     fill: var(--main-color);
 }
 .about-me__info{
-    /* height: 3rem; */
-    width:65%;
+    width:55%;
     margin-left:1.5rem;
-
+    margin-bottom: 2rem ;
 }
 
 .img{
@@ -303,6 +306,11 @@ footer .socials .icon_socials svg:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.highlight{
+    color: var(--btn-color);
+    margin: 0;
+    line-height: 1;
 }
 
 .image-effect_1{
@@ -351,7 +359,7 @@ footer .socials .icon_socials svg:hover{
 }
 .about-me__text{
     color: rgb(109, 109, 109);
-    width: 80%;
+    width: 65%;
 }
 @keyframes specialAnimation2 {
     100%{
@@ -1091,6 +1099,10 @@ footer{
     .about-me__info{
         /* height: 3rem; */
         width:80%;
+        margin-left: 7rem;
+    }
+    .about-me__name{
+        margin-left: 7rem;
     }
     .more_about-content{
         width: 75vw;
