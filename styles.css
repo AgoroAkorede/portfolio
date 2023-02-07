@@ -1111,6 +1111,7 @@ footer{
     .about-me__image{
         height: 16rem;
         width: 16rem;
+        margin: 1rem 4rem;
     }
     
     .hand{
